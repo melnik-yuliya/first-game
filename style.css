@@ -1,0 +1,105 @@
+*{
+    box-sizing: border-box;
+}
+
+.body{
+    overflow-x: hidden;
+    background-color: rgb(255 253 254);
+}
+.container{
+    max-width: 1800px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.block{
+max-width: 100%;
+flex: 0 0 85%;
+max-height: 85vh;
+}
+
+.map-block{
+    cursor: pointer;
+    position: relative;
+    max-width: 100vw;
+    height: 100%;
+    z-index: 1;
+}
+
+.map-block img{
+    position: absolute;
+   width: 100%;
+    top:0;
+    left:0;
+    object-fit: contain;
+}
+
+.info{
+    user-select: none;
+    font-size: 25px;
+    flex: 0 0 10%;
+    max-height: 10vh;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px 30px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.info span{
+    font-weight: 600;
+    font-size: 32px;
+    color:rgb(0, 209, 209);
+    padding: 0 15px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 2;
+}
+
+.trace{
+    user-select: none;
+    width: 50px;
+    height: 50px;
+    z-index: 5;
+    position: absolute;
+}
+
+.winner{
+    width: 100px;
+    height: 100px;
+    animation-name: fadeOut;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+    animation-duration: 1.5s;
+    z-index: 20;
+    position: absolute;
+}
+
+ img{
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes fadeOut{
+   to{
+    top:50%;
+    left:50%;
+    width: 300px;
+    height: 300px;
+    }
+}
